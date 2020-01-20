@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ settings.siteName }} | {%- if title -%}{{ title }}{%- endif -%}</title>
+        <title>{{ settings.siteName }}{%- if title -%}{{ title }}{%- endif -%}</title>
         <meta name="description" content="{%- if description -%}{{ description }}{%- else -%}{{ settings.siteDescription }}{%- endif -%}">
-        <link rel="preload" href="/assets/fonts/Stag-Book.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/assets/fonts/Stag-Medium.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/StagSans-Book.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/StagSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/StagSans-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/StagSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
         <style type="text/css">{% include "css/styles.css" %}</style>
     </head>

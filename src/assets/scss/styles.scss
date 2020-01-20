@@ -8,7 +8,9 @@
 @import "_ui/icons";
 
 @import "_components/header";
-@import "_components/about";
+@import "_components/menu-dropdown";
+@import "_components/hero";
+@import "_components/fokus";
 @import "_components/brands";
 @import "_components/call-to-action";
 @import "_components/blog";
@@ -57,7 +59,7 @@ $max_font: 10px;
   --section-padding__small: 4rem;
   --section-padding__large: 10rem;
   --gutter: 2rem;
-  --header__height: 14rem;
+  --header__height: 15rem;
 
   --container-padding: 8vw;
   @media (max-width: $screen-lg) {
@@ -89,13 +91,13 @@ html{
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   /* Font varient */
-  // font-variant-ligatures: none;
-  // -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
   /* Smoothing */
-  // text-rendering: optimizeLegibility;
-  // -moz-osx-font-smoothing: grayscale;
-  // -webkit-font-smoothing: antialiased;
-  // text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   @media (max-width: $screen-sm) {
     font-size: 9px;
@@ -144,9 +146,9 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   color: inherit;
 }
 
-p{
-  color: rgba($text-color, .9);
-}
+// p{
+//   color: rgba($text-color, .9);
+// }
 
 .blockquote{
   margin: var(--gutter) 0;
@@ -191,8 +193,7 @@ p{
 }
 
 a{
-  color: $black;
-  font-weight: 500;
+  color: $primary;
   text-decoration: none;
 }
 

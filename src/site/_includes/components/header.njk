@@ -1,13 +1,24 @@
 <header class="header">
   <div class="top">
     <ul class="contact-info">
-      <li><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li>
-      <li><a href="tel:{{ settings.mail }}">{{ settings.mail }}</a></li>
+      <li><a href="tel:{{ settings.phone }}">{{ '/src/assets/images/mobil-phone-icon.svg' | svgContents | safe }}{{ settings.phone }}</a></li>
+      <li><a href="tel:{{ settings.mail }}">{{ '/src/assets/images/mail-icon.svg' | svgContents | safe }}{{ settings.mail }}</a></li>
         <li>{{ settings.openHours }}</li>
     </ul>
+
+    {% set navPages = collections.all | eleventyNavigation %}
+    <ul class="internal_links">
+    {%- for item in collections.internal_links %}
+      <li {% if item.url == page.url %} class="active"{% endif %}>
+        <a href="{{ item.url | url }}">{{ item.data.title }}</a>
+      </li>
+    {%- endfor %}
+    </ul>
+
+
   </div>
   <div class="bottom">
-    <a class="logo" href="/" aria-label="Gå til forsiden">{{ '/src/assets/images/logo.svg' | svgContents | safe }}</a>
+    <a class="logo" href="/" aria-label="Gå til forsiden">{{ '/src/assets/images/logo_white.svg' | svgContents | safe }}</a>
     <div class="menu-dropdown">
       <div class="menu-dropdown__icon"></div>
     </div>

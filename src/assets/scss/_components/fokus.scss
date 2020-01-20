@@ -1,0 +1,44 @@
+.fokus{
+
+    /*----- MEDIA VARIABLER -----*/
+
+    --fokus__grid-col: repeat(4, 1fr);
+
+    @media (max-width: $screen-sm) {
+        --fokus__grid-col: repeat(2, 1fr);
+    }
+
+    @media (max-width: $screen-xs) {
+        --fokus__grid-col: 1fr;
+    }
+
+
+    /*----- STYLING -----*/
+
+    padding: var(--section-padding) 0;
+    @extend .container;
+    display: grid;
+    grid-template-columns: var(--bottom__grid-col);
+    grid-gap: calc(var(--gutter) * 2);
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .image{
+            width: 100%;
+            max-width: 18rem;
+            height: auto;
+            margin-bottom: 1rem;
+            background-color: $light-gray-light;
+            border-radius: 50%;
+        }
+
+        .heading{
+            margin-bottom: 0;
+        }
+    }
+
+}

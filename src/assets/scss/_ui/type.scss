@@ -1,34 +1,42 @@
 @font-face {
-    font-family:Stag-Book;
-    src: url(/assets/fonts/Stag-Book.woff2);
+    font-family: 'StagSans';
+    src: url('/assets/fonts/StagSans-Book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family:Stag-Medium;
-    src: url(/assets/fonts/Stag-Medium.woff2);
+    font-family: 'StagSans';
+    src: url('/assets/fonts/StagSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family:StagSans-Book;
-    src: url(/assets/fonts/StagSans-Book.woff2);
+    font-family: 'StagSans';
+    src: url('/assets/fonts/StagSans-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family:StagSans-Semibold;
-    src: url(/assets/fonts/StagSans-Semibold.woff2);
+    font-family: 'StagSans';
+    src: url('/assets/fonts/StagSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
     font-display: swap;
 }
 
-$base-font: "StagSans-Book",'Raleway',Arial,sans-serif;
-$heading-font: "Stag-Medium",'Raleway',Arial,sans-serif;
+$base-font: "StagSans",'Raleway',Arial,sans-serif;
+$heading-font: $base-font;
 
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6{
     font-family: $heading-font;
-	font-weight: 500;
+	font-weight: 700;
     color: inherit;
     line-height: 110%;
     margin-top: 1em;

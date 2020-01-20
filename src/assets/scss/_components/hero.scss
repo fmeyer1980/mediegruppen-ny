@@ -1,0 +1,68 @@
+.hero{
+
+    /*----- MEDIA VARIABLER -----*/
+
+    --hero__wrapper__col: 1fr .6fr;
+    --hero__megaphone__display: block;
+    --hero__heading__font-size: 8rem;
+
+    @media (max-width: $screen-md) {
+        --hero__heading__font-size: 5rem;
+    }
+
+    @media (max-width: $screen-sm) {
+        --hero__wrapper__col: 1fr;
+        --hero__megaphone__display: none;
+        --hero__heading__font-size: 5rem;
+    }
+
+    @media (max-width: $screen-xs) {
+        --hero__heading__font-size: 4rem;
+    }
+
+
+    /*----- STYLING -----*/
+
+
+    @extend .container;
+    background-color: $primary;
+    color: $white;
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: var(--hero__wrapper__col);
+        grid-gap: 4vmin;
+        padding: calc(var(--header__height) + 15vmin) 0 15vmin;
+        align-items: center;
+
+        .content{
+            padding-right: 3rem;
+
+            .heading{
+                font-size: var(--hero__heading__font-size);
+                margin-top: 0;
+                line-height: 1;
+                margin-bottom: 1em;
+
+                span{
+                    color: $black;
+                }
+            }
+
+            .text{
+                font-size: 1.8rem;
+                font-weight: 500;
+                max-width: 55ch;
+            }
+            
+        }
+
+        .megaphone{
+            fill: $white;
+            width: 100%;
+            display: var(--hero__megaphone__display);
+        }
+    }
+
+
+}
