@@ -1,0 +1,7 @@
+<section class="brands">
+    <div class="brands-wrapper">
+        {% for item in brands %}
+            <img class="image" height="80px" src="{{ settings.claudinaryUrl }}f_auto,q_auto{{ settings.claudinaryFolder }}{{ item.image }}" alt="brands">
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,24 @@
+{
+    "siteName": "Indexed",
+    "siteDescription": "Jamstack i super awsome",
+    "phone": "+45 7584 1200",
+    "mail": "info@mediegruppen.net",
+    "cvr": "DK39546507",
+    "address": "Horsensvej 72A",
+    "zipCode": "DK-7100 Vejle",
+    "openHours": "man-tors 8-16, fre 8-15",
+    "socialmedia": [
+        {
+            "name": "facebook",
+            "icon": "facebook-square",
+            "url": "facebook-url"
+        },
+        {
+            "name": "twitter",
+            "icon": "twitter-square",
+            "url": "twitter-url"
+        }
+    ],
+    "claudinaryUrl": "https://res.cloudinary.com/fmeyer1980/image/upload/",
+    "claudinaryFolder": "/v1578763955/mediegruppen/"
+}

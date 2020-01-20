@@ -1,0 +1,32 @@
+<footer class="footer">
+    <div class="top">
+        <div class="firm-info">
+            <img loading="lazy" src="{{ settings.claudinaryUrl }}c_scale,f_auto,q_auto{{ settings.claudinaryFolder }}splatter" alt="Splatter">
+            <ul class="info">
+                <li><strong>Mediegruppen</strong></li>
+                <li>design:kommunikation as</li>
+                <li>{{ settings.address }}</li>
+                <li>{{ settings.zipCode }}</li>
+            </ul>
+            <ul class="contact">
+                <li><a href="tel:{{ settings.phone }}">{{ '/src/assets/images/mobil-phone-icon.svg' | svgContents | safe }}{{ settings.phone }}</a></li>
+                <li><a href="mailto:{{ settings.mail }}">{{ '/src/assets/images/mail-icon.svg' | svgContents | safe }}{{ settings.mail }}</a></li>
+            </ul>
+            <ul class="socialmedia">
+                <li><a aria-label="Gå til facebook" href="">{{ '/src/assets/images/facebook-icon.svg' | svgContents | safe }}</a></li>
+                <li><a aria-label="Gå til facebook" href="">{{ '/src/assets/images/linkedin-icon.svg' | svgContents | safe }}</a></li>
+                <li><a aria-label="Gå til facebook" href="">{{ '/src/assets/images/instagram-icon.svg' | svgContents | safe }}</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <p class="heading h4">Det brænder vi for</p>
+            <nav class="services-nav dark">
+                {% include "components/services-nav.njk" %}
+            </nav>
+        </div>
+    </div>
+    <div class="bottom">
+        <a class="logo" aria-label="Gå til forsiden" href="/">{{ '/src/assets/images/logo_white.svg' | svgContents | safe }}</a>
+        <span class="copyright">Copyright © 2020 Mediegruppen. All rights reserved.</span>
+    </div>
+</footer>

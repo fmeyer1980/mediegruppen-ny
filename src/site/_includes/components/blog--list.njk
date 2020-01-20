@@ -1,0 +1,18 @@
+<a class="blog--list__item" href="{{ item.url }}">
+    <div class="top">
+        <span class="date">09. december 2019</span>
+        <span class="author">{{ item.data.author }}</span>
+    </div>
+    <div class="image-wrapper">
+        <img class="image" loading="lazy"
+            srcset="
+            {{ settings.claudinaryUrl }}f_auto,q_70,w_280,h_210,c_fill{{ settings.claudinaryFolder }}{{ item.data.cover_image }} 1x,
+            {{ settings.claudinaryUrl }}f_auto,q_70,w_560,h_420,c_fill{{ settings.claudinaryFolder }}{{ item.data.cover_image }} 2x"
+        alt="{{ item.heading }}">
+        <div class="tag">Bagom Mediegruppen</div>
+    </div>
+    <div class="content">
+        <h3 class="heading h5">{{ item.data.title }}</h3>
+        <p class="text">{{ item.data.excerpt }}</p>
+    </div>
+</a>

@@ -1,0 +1,17 @@
+{# {{ collections.all | eleventyNavigation("ydelser")  | eleventyNavigationToHtml({
+    listElement: "ul",
+    listItemElement: "li",
+    listClass: "",
+    listItemClass: "item",
+    activeListItemClass: "active",
+    showExcerpt: true,
+    activeKey: eleventyNavigation.key
+}) | safe }} #}
+
+<ul>
+    {%- for item in collections.services %}
+        <li {% if item.url == page.url %} class="active"{% endif %}>
+            <a href="{{ item.url | url }}">{{ item.data.eleventyNavigation.excerpt | safe }}{{ item.data.eleventyNavigation.title }}</a>
+        </li>
+    {%- endfor %}
+</ul>

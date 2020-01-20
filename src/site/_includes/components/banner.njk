@@ -1,0 +1,18 @@
+<section class="banner">
+    {% if cover_video %}
+        <video class="video" muted="muted" autoplay loop="loop" playsinline="" preload="auto" class="video" poster="https://res.cloudinary.com/fmeyer1980/video/upload/f_auto,q_auto,w_1800,h_500,c_fill{{ settings.claudinaryFolder }}{{ cover_video }}">
+            <source src="https://res.cloudinary.com/fmeyer1980/video/upload/f_auto,q_auto,w_1800,h_500,c_fill{{ settings.claudinaryFolder }}{{ cover_video }}">
+        </video>
+    {% else %}
+        <img class="image"
+            sizes="(max-width: 1400px) 100vw, 1400px"
+            srcset="
+            {{ settings.claudinaryUrl }}c_fill,f_auto,q_auto,w_375,h_134{{ settings.claudinaryFolder }}{{ cover_image }} 375w,
+            {{ settings.claudinaryUrl }}c_fill,f_auto,q_auto,w_768,h_274{{ settings.claudinaryFolder }}{{ cover_image }} 768w,
+            {{ settings.claudinaryUrl }}c_fill,f_auto,q_auto,w_992,h_354{{ settings.claudinaryFolder }}{{ cover_image }} 992w,
+            {{ settings.claudinaryUrl }}c_fill,f_auto,q_auto,w_1280,h_457{{ settings.claudinaryFolder }}{{ cover_image }} 1280w,
+            {{ settings.claudinaryUrl }}c_fill,f_auto,q_auto,w_1400,h_500{{ settings.claudinaryFolder }}{{ cover_image }} 1400w"
+            src="{{ settings.claudinaryUrl }}c_fill,f_auto,q_auto,w_1400{{ settings.claudinaryFolder }}{{ cover_image }}"
+        alt="{{ title }}">
+    {% endif %}
+</section>

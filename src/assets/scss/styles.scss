@@ -1,0 +1,231 @@
+@import "_ui/var";
+@import "_ui/breakpoints";
+@import "_ui/mixins";
+@import "_ui/color";
+@import "_ui/type";
+@import "_ui/btn";
+@import "_ui/keyframes";
+@import "_ui/icons";
+
+@import "_components/header";
+@import "_components/about";
+@import "_components/brands";
+@import "_components/call-to-action";
+@import "_components/blog";
+@import "_components/banner";
+@import "_components/footer";
+@import "_components/newsletter";
+@import "_components/services-nav";
+@import "_components/team";
+
+@import "_layouts/main";
+
+@import "_external/glide.core";
+
+$min_width: 320px;
+$max_width: 1400px;
+$min_font: 8px;
+$max_font: 10px;
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+:root{
+    
+  --container-width: 1200px;
+  --section-padding: 7rem;
+  --section-padding__small: 4rem;
+  --section-padding__large: 10rem;
+  --gutter: 2rem;
+  --header__height: 14rem;
+
+  --container-padding: 8vw;
+  @media (max-width: $screen-lg) {
+
+    --section-padding: 10vmin;
+    --section-padding__small: 5vmin;
+    --section-padding__large: 15vmin;
+
+    --container-padding: 4vw;
+  }
+  
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection{
+    background-color: $primary;
+    color: $white;
+}
+
+
+html{
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  // font-variant-ligatures: none;
+  // -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  // text-rendering: optimizeLegibility;
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+  // text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  @media (max-width: $screen-sm) {
+    font-size: 9px;
+  }
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  line-height: 1.4;
+  font-family: $base-font;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: $white;
+  // display: flex;
+  // flex-direction: column;
+  // letter-spacing: -.3px;
+}
+
+.transition-fade {
+  transition: .01s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+*:focus{
+  outline: none;
+}
+
+main{
+  padding: var(--section-padding) 0;
+  background-color: $light-gray-light;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+.manchet{
+  font-family: $heading-font;
+  font-size: 1.8rem;
+  color: inherit;
+}
+
+p{
+  color: rgba($text-color, .9);
+}
+
+.blockquote{
+  margin: var(--gutter) 0;
+  line-height: 1.15;
+  &::before, &::after{
+    content: "";
+    width: 10%;
+    height: 1px;
+    background-color: $black;
+    display: block;
+  }
+  &__inner-wrapper{
+    padding: var(--gutter) 0;
+    display: block;
+
+    .quote{
+      color: $primary;
+      font-size: 2.6rem;
+      margin: 0;
+      max-width: 37ch;
+      font-style: italic;
+      font-family: $heading-font;
+    }
+    .author{
+      font-family: "Stag-Book";
+      margin-top: calc(var(--gutter) / 3);
+      display: block;
+      font-weight: 200;
+    }
+  }
+}
+
+.container{
+  @include container;
+}
+
+.t-align{
+
+  &--center{
+    text-align: center;
+  }
+}
+
+a{
+  color: $black;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.opc{
+
+  &-7{
+    opacity: .7;
+  }
+  &-5{
+    opacity: .5;
+  }
+}
+
+
+.section-heading{
+  padding: 12rem 0 6rem;
+  text-align: center;
+
+  .heading{
+    font-size: 3.6rem;
+    margin-top: 0;
+    margin-bottom: .3em;
+  }
+}
+
+
+.reveal-item{
+  opacity: 0;
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  transform: translateY(5rem);
+
+  &--is-visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

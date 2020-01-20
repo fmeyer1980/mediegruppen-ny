@@ -1,0 +1,21 @@
+<div class="item">
+    <div class="image-wrapper">
+        <img class="image" loading="lazy"
+            srcset="
+            {{ settings.claudinaryUrl }}f_auto,q_70,w_280,h_210,c_fill{{ settings.claudinaryFolder }}{{ item.data.prifile_image }} 1x,
+            {{ settings.claudinaryUrl }}f_auto,q_70,w_560,h_420,c_fill{{ settings.claudinaryFolder }}{{ item.data.prifile_image }} 2x"
+        alt="{{ item.title }}">
+    </div>
+    <h5>{{ item.data.title }}</h5>
+    {% if item.data.position %}
+        <p>{{ item.data.position }}</p>
+    {% endif %}
+    {% if item.data.phone %}
+        <a href="">{{ item.data.phone }}</a>
+    {% endif %}
+    {% if item.data.mobil %}
+        <a href="">{{ item.data.mobil }}</a>
+    {% endif %}
+</div>
+{# 
+{{ '/src/assets/images/phone-icon.svg' | svgContents | safe }} #}

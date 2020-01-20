@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="top">
+    <ul class="contact-info">
+      <li><a href="tel:{{ settings.phone }}">{{ settings.phone }}</a></li>
+      <li><a href="tel:{{ settings.mail }}">{{ settings.mail }}</a></li>
+        <li>{{ settings.openHours }}</li>
+    </ul>
+  </div>
+  <div class="bottom">
+    <a class="logo" href="/" aria-label="Gå til forsiden">{{ '/src/assets/images/logo.svg' | svgContents | safe }}</a>
+    <div class="menu-dropdown">
+      <div class="menu-dropdown__icon"></div>
+    </div>
+    {% include "components/main-menu.njk" %}
+  </div>
+</header>
+
+<div class="mobil-header-popup">
+  <div class="wrapper">
+    <span class="heading">Menu</span>
+    <nav class="main-nav--mobil">
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+          listElement: "ul",
+          listItemElement: "li",
+          listClass: "main-nav__menu",
+          listItemClass: "item",
+          listItemHasChildrenClass: "has-children",
+          activeListItemClass: "active",
+          activeKey: eleventyNavigation.key
+      }) | safe }}
+    </nav>
+    <span class="heading">Følg os på</span>
+    <ul class="social">
+      <li><a href="">{{ '/src/assets/images/facebook-icon.svg' | svgContents | safe }}</a></li>
+      <li><a href="">{{ '/src/assets/images/twitter-icon.svg' | svgContents | safe }}</a></li>
+      <li><a href="">{{ '/src/assets/images/linkedin-icon.svg' | svgContents | safe }}</a></li>
+    </ul>
+  </div>
+</div>

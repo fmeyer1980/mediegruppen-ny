@@ -1,0 +1,46 @@
+.btn{
+    padding: .8em 2.2em;
+    color: $white;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: all .2s ease-out;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    font-family: "Stag-Book";
+
+    &--primary{
+        background-color: $primary;
+        color: $white;
+        transition: color, background-color, .3s ease;
+
+        &:hover{
+            background-color: $primary-dark;
+        }
+    }
+
+    &--secondary{
+        border: solid 2px $light-gray-light;
+        color: $light-gray-light;
+        font-weight: 500;
+    }
+
+    &--dark{
+        background-color: $black;
+        border: solid 2px $black;
+    }
+
+    &--large{
+        font-size: 1.8rem;
+    }
+
+    &--small{
+        font-size: 1.2rem;
+    }
+
+    
+
+    
+}

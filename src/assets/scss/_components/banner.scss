@@ -1,0 +1,47 @@
+.banner{
+
+    /*----- MEDIA VARIABLER -----*/
+
+    --banner-height: 50rem;
+
+    @media (max-width: $screen-sm) {
+        --banner-height: 30rem;
+    }
+
+
+    /*----- STYLING -----*/
+
+    @keyframes video__fade-in {
+
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+        
+    }
+
+    position: relative;
+    overflow: hidden;
+    padding-top: var(--banner-height);
+    background-color: $light-gray-dark;
+    margin-top: calc(var(--header__height) - 4rem);
+    
+    .image, .video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    .video{
+        animation: video__fade-in .3s ease-in backwards;
+    }
+
+}

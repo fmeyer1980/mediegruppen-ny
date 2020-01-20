@@ -1,0 +1,125 @@
+.footer{
+
+    --footer__top__grid-columns: repeat(3, 1fr);
+    
+    @media (max-width: $screen-sm) {
+        --footer__top__grid-columns: 1fr;
+    }
+
+
+    background-color: $secondary;
+    color: $white;
+
+    .top{
+        padding-top: calc(var(--gutter) * 3);
+        padding-bottom: calc(var(--gutter) * 3);
+        @extend .container;
+        display: grid;
+        grid-template-columns: var(--footer__top__grid-columns);
+        grid-gap: calc(var(--gutter) * 2);
+
+        .firm-info{
+
+            .info, .contact, .socialmedia{
+                @include list-style-none;
+                margin-bottom: var(--gutter);
+    
+                li{
+                    line-height: 1.6;
+    
+                    a{
+                        color: inherit;
+    
+                        &:hover{
+                            color: $primary;
+                        }
+        
+                        svg{
+                            fill: currentColor;
+                        }
+                    }
+    
+                }
+    
+                
+            }
+    
+            .info{
+    
+                img{
+                    margin-bottom: var(--gutter);
+                }
+            }
+    
+            .contact{
+    
+                li{
+    
+                    a{
+                        display: flex;
+                        align-items: center;
+                        svg{
+                            height: 1.4rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+    
+                
+            }
+    
+            .socialmedia{
+                display: flex;
+    
+                li{
+                    padding-right: 1.5rem;
+    
+                    a{
+                        border: 2px solid currentColor;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 3.4rem;
+                        height: 3.4rem;
+                        border-radius: 50%;
+    
+    
+                        svg{
+                            height: 1.6rem;
+                        }
+    
+                    }
+                }
+    
+                
+    
+            }
+
+        }
+
+
+
+
+    }
+
+    .bottom{
+        @extend .container;
+        padding: 3rem 0;
+        background-color: darken($secondary, 10%);
+        display: flex;
+        align-items: center;
+        opacity: .7;
+
+        .logo{
+
+            svg{
+                width: 20rem;
+            }
+            
+        }
+
+        .copyright{
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{% set body_class = title %}
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    {% include "components/banner.njk" %}
+    <main class="main main--right-sidebar">
+        <article class="main__content">
+            <h1 class="heading">{{ title }}</h1>
+            <p class="manchet">{{ manchet_text }}</p>
+            {% if top_text %}
+                <div class="top-text">{{ top_text | safe }}</div>
+            {% endif %}
+            {% if quote %}
+                <blockquote class="blockquote">
+                    <div class="blockquote__inner-wrapper">
+                        <p class="quote">{{ quote }}</p>
+                        <i class="author">{{ quote_author }}</i>
+                    </div>
+                </blockquote>
+            {% endif %}
+            {{ content | safe }}
+        </article>
+        <aside class="main__aside--right">
+            {% include "components/newsletter.njk" %}
+            <div class="services-nav light">
+                <h5 class="heading">Se også</h5>
+                {% include "components/services-nav.njk" %}
+            </div>
+        </aside>
+    </main>
+{% endblock content %}

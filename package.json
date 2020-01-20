@@ -1,0 +1,35 @@
+{
+  "name": "mediegruppen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/fmeyer1980/mediegruppen-ny.git",
+  "author": "Flemming Meyer <fmeyer01@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
+    "build": "gulp build & ELEVENTY_ENV=prod eleventy",
+    "webpack": "webpack-cli src/assets/js/app.js -o src/assets/js/script.js --mode production"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-navigation": "^0.1.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "@glidejs/glide": "^3.4.1",
+    "eleventy-plugin-respimg": "^0.1.2",
+    "eleventy-plugin-svg-contents": "^0.5.1",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "html-minifier": "^3.5.21",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.12.0",
+    "quicklink": "^2.0.0-alpha",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

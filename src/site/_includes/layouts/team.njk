@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    {% include "components/banner.njk" %}
+    <main class="main main--right-sidebar">
+        <article class="main__content">
+            <h1 class="heading">{{ title }}</h1>
+            {{ content | safe }}
+            <h5>Design: Kommunikation</h5>
+            <div class="team--list">
+                {% for item in collections.team_design %}
+                    {% include "components/team.njk" %}
+                {% endfor %}
+            </div>
+            <h5>Forlag: Sundhedskommunikation</h5>
+            <div class="team--list">
+                {% for item in collections.team_forlag %}
+                    {% include "components/team.njk" %}
+                {% endfor %}
+            </div>
+        </article>
+        <aside class="main__aside--right">
+            {% include "components/newsletter.njk" %}
+            <div class="services-nav light">
+                <h5 class="heading">Se også</h5>
+                {% include "components/services-nav.njk" %}
+            </div>
+        </aside>
+    </main>
+{% endblock content %}

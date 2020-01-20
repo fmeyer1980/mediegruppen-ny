@@ -1,0 +1,12 @@
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <main class="main">
+        <div class="blog--list">
+            {% for item in collections.blog %}
+                {% include "components/blog--list.njk" %}
+            {% endfor %}
+        </div>
+    </main>
+{% endblock content %}

@@ -1,0 +1,64 @@
+.services-nav{
+
+    $border-color: rgba($white, .5);
+    --dds: $white;
+
+    &.light{
+        background-color: $white;
+        .heading{
+            padding: var(--gutter) var(--gutter) 2rem;
+            margin: 0;
+        }
+
+        li{
+            border-color: rgba($black, .05);
+            a{
+                padding: 1rem var(--gutter);
+                &:hover{
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+        
+    }
+
+    &.dark{
+       
+    }
+
+    ul{
+        @include list-style-none;
+        font-family: $base-font;
+        
+        li{
+            border-bottom: 1px solid;
+            border-color: rgba($white, .05);
+
+            a{
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                padding: 1rem 1.5rem;
+                color: currentColor;
+                background-color: transparent;
+                transition: background-color, color, .2s ease;
+
+                svg{
+                    height: 1.3rem;
+                    flex-grow: 0;
+                    fill: currentColor;
+                    margin-right: 1rem;
+                }
+
+                &:hover{
+                    background-color: rgba($white, .1)
+                }
+
+            }
+
+        }
+
+    }
+
+}
