@@ -7,7 +7,7 @@
     }
 
 
-    background-color: $secondary;
+    background-color: $dark-gray-dark;
     color: $white;
 
     .top{
@@ -105,15 +105,21 @@
     .bottom{
         @extend .container;
         padding: 3rem 0;
-        background-color: darken($secondary, 10%);
+        background-color: $black;
         display: flex;
         align-items: center;
         opacity: .7;
 
         .logo{
+            color: $white;
 
             svg{
                 width: 20rem;
+                color: #fff !important;
+
+                path{
+                    color: #fff !important;
+                }
             }
             
         }

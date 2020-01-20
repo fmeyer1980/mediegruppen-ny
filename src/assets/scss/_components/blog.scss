@@ -13,7 +13,7 @@
         /*----- STYLING -----*/
 
 
-        background-color: $light-gray-light;
+        background-color: $dark-gray-dark;
         padding: var(--section-padding) 0;
         display: flex;
         flex-direction: column;
@@ -22,6 +22,11 @@
 
         &__slider{
             position: relative;
+
+            // .blog--list__item{
+            //     background-color: $dark-gray-light;
+            //     color: $white;
+            // }
 
             .arrows{
                 position: absolute;
@@ -111,6 +116,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            color: $black;
 
             .top{
                 display: flex;

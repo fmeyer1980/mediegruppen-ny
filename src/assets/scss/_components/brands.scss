@@ -11,20 +11,24 @@
 }
 
 .brands{
-    background-color: $secondary;
-    padding: 3rem 0;
+    background-color: $dark-gray-light;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     @extend .container;
-    overflow: hidden;
 
     &-wrapper{
-        display: flex; 
-        animation: brands-animation 100s infinite;
-        animation-timing-function: linear; 
-        animation-fill-mode: backwards;
-        .image{
-            height: 7rem;
-            margin: 0 2.5rem;
+        overflow: hidden;
+        &__inner{
+            display: flex; 
+            animation: brands-animation 100s infinite;
+            animation-timing-function: linear; 
+            animation-fill-mode: backwards;
+            .image{
+                height: 7rem;
+                margin: 0 2.5rem;
+            }
         }
+       
 
     }
 }

@@ -15,12 +15,12 @@
 
     /*----- STYLING -----*/
 
-    padding: var(--section-padding) 0;
+    padding: var(--section-padding__large) 0;
     @extend .container;
     display: grid;
     grid-template-columns: var(--fokus__grid-col);
     grid-gap: calc(var(--gutter) * 2);
-    background-color: $dark-gray-dark;
+    background-color: $black;
     color: $white;
     .item{
         display: flex;
@@ -35,7 +35,7 @@
         }
 
         .heading{
-            margin-bottom: 0;
+            margin-top: 1em;
         }
     }
 
