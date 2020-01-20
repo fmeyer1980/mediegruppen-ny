@@ -91,13 +91,13 @@ html{
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   /* Font varient */
-  font-variant-ligatures: none;
-  -webkit-font-variant-ligatures: none;
+  // font-variant-ligatures: none;
+  // -webkit-font-variant-ligatures: none;
   /* Smoothing */
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  // text-rendering: optimizeLegibility;
+  // -moz-osx-font-smoothing: grayscale;
+  // -webkit-font-smoothing: antialiased;
+  // text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   @media (max-width: $screen-sm) {
     font-size: 9px;

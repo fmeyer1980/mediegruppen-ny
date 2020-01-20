@@ -3,6 +3,7 @@
     /*----- MEDIA VARIABLER -----*/
 
     --hero__wrapper__col: 1fr .6fr;
+    --hero__wrapper__padding: 12vmin;
     --hero__megaphone__display: block;
     --hero__heading__font-size: 8rem;
 
@@ -32,7 +33,7 @@
         display: grid;
         grid-template-columns: var(--hero__wrapper__col);
         grid-gap: 4vmin;
-        padding: calc(var(--header__height) + 15vmin) 0 15vmin;
+        padding: calc(var(--header__height) + var(--hero__wrapper__padding)) 0 var(--hero__wrapper__padding);
         align-items: center;
 
         .content{
@@ -51,8 +52,9 @@
 
             .text{
                 font-size: 1.8rem;
-                font-weight: 500;
                 max-width: 55ch;
+                // font-weight: 500;
+                opacity: .9;
             }
             
         }

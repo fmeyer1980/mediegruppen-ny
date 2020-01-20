@@ -18,22 +18,20 @@
     padding: var(--section-padding) 0;
     @extend .container;
     display: grid;
-    grid-template-columns: var(--bottom__grid-col);
+    grid-template-columns: var(--fokus__grid-col);
     grid-gap: calc(var(--gutter) * 2);
-
+    background-color: $dark-gray-dark;
+    color: $white;
     .item{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        color: inherit;
 
-        .image{
-            width: 100%;
-            max-width: 18rem;
-            height: auto;
-            margin-bottom: 1rem;
-            background-color: $light-gray-light;
-            border-radius: 50%;
+        svg{
+            fill: currentColor;
+            height: 10rem;
         }
 
         .heading{
