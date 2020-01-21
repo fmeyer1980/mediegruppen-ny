@@ -17,12 +17,16 @@
     /*----- STYLING -----*/
 
     .item{
+        // display: flex;
+        // flex-direction: column;
 
         .image-wrapper{
             position: relative;
             overflow: hidden;
             padding-top: 420px / 560px * 100%;
             background-color: $light-gray-dark;
+            flex-grow: 0;
+            flex-shrink: 0;
             
             .image{
                 position: absolute;
@@ -37,9 +41,50 @@
 
         }
 
-        a{
-            color: inherit;
+        .content{
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-start;
+            // flex-grow: 1;
+
+            .heading{
+                margin-top: 1em;
+                margin-bottom: .2em;
+            }
+    
+            .position{
+                margin-top: 0;
+                margin-bottom: 1em;
+                opacity: .8;
+            }
+            
         }
+
+        .contact-info{
+            @include list-style-none;
+
+            .link{
+                color: inherit;
+                display: flex;
+                align-items: center;
+                margin-bottom: .3em;
+                transition: color, .2s ease-in;
+    
+                &:hover{
+                    color: $primary;
+                }
+    
+                svg{
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    fill: currentColor;
+                    margin-right: .5em;
+                }
+            }
+
+        }
+
+        
         
     }
 
@@ -58,6 +103,12 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap: var(--gutter);
+        margin-top: 5rem;
 
+        .heading{
+            grid-column-start: 1;
+            grid-column-end: -1;
+            margin-bottom: 0rem;
+        }
     }
 }

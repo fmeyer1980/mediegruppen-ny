@@ -1,7 +1,8 @@
 .services-nav{
 
+    --gutter: 3rem;
+
     $border-color: rgba($white, .5);
-    --dds: $white;
 
     &.light{
         background-color: $white;

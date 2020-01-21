@@ -2,7 +2,7 @@
 
     /*----- MEDIA VARIABLER -----*/
 
-    --right-sidebar__col: 1fr .5fr;
+    --right-sidebar__col: 1fr .45fr;
 
 
     @media (max-width: $screen-sm) {
@@ -40,8 +40,9 @@
 
     &__content{
 
-        .heading{
+        > .heading{
             margin-top: 0;
+            max-width: 15ch;
         }
 
         .manchet{
@@ -73,11 +74,5 @@
     &__aside{
         position: sticky;
         top: 10px;
-
-        &--right{
-            // display: grid;
-            // grid-template-columns: 1fr;
-            // grid-gap: var(--gutter);
-        }
     }
 }

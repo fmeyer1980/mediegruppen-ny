@@ -1,19 +1,18 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-    {% include "components/banner.njk" %}
     <main class="main main--right-sidebar">
         <article class="main__content">
             <h1 class="heading">{{ title }}</h1>
             {{ content | safe }}
-            <h5>Design: Kommunikation</h5>
             <div class="team--list">
+                <h5 class="heading">Design: Kommunikation</h5>
                 {% for item in collections.team_design %}
                     {% include "components/team.njk" %}
                 {% endfor %}
             </div>
-            <h5>Forlag: Sundhedskommunikation</h5>
             <div class="team--list">
+                <h5 class="heading">Forlag: Sundhedskommunikation</h5>
                 {% for item in collections.team_forlag %}
                     {% include "components/team.njk" %}
                 {% endfor %}
