@@ -33,6 +33,10 @@
         &:hover{
             color: $primary;
             background-color: $dark-gray-dark;
+
+            svg{
+                fill: $primary;
+            }
         }
 
         &:nth-child(2){
@@ -43,7 +47,7 @@
         }
 
         svg{
-            fill: currentColor;
+            fill: $white;
             height: 9rem;
             transition: fill, .2s ease-in;
         }
