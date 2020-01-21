@@ -4,12 +4,12 @@
     display: inline-block;
     text-transform: uppercase;
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 500;
     transition: all .2s ease-out;
     text-decoration: none;
     border: none;
     border-radius: 0;
-    font-family: "Stag-Book";
+
 
     &--primary{
         background-color: $primary;

@@ -56,8 +56,8 @@ $max_font: 10px;
     
   --container-width: 1200px;
   --section-padding: 10rem;
-  --section-padding__small: 5rem;
-  --section-padding__large: 15rem;
+  --section-padding__small: 6rem;
+  --section-padding__large: 14rem;
   --gutter: 2rem;
   --header__height: 15rem;
 
@@ -140,46 +140,9 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   display: block;
 }
 
-.manchet{
-  font-family: $heading-font;
-  font-size: 1.8rem;
-  color: inherit;
-}
-
 // p{
 //   color: rgba($text-color, .9);
 // }
-
-.blockquote{
-  margin: var(--gutter) 0;
-  line-height: 1.15;
-  &::before, &::after{
-    content: "";
-    width: 10%;
-    height: 1px;
-    background-color: $black;
-    display: block;
-  }
-  &__inner-wrapper{
-    padding: var(--gutter) 0;
-    display: block;
-
-    .quote{
-      color: $primary;
-      font-size: 2.6rem;
-      margin: 0;
-      max-width: 37ch;
-      font-style: italic;
-      font-family: $heading-font;
-    }
-    .author{
-      font-family: "Stag-Book";
-      margin-top: calc(var(--gutter) / 3);
-      display: block;
-      font-weight: 200;
-    }
-  }
-}
 
 .container{
   @include container;

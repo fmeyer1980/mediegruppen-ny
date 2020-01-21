@@ -12,8 +12,7 @@
 
 .brands{
     background-color: $dark-gray-light;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 5rem 0;
     @extend .container;
 
     &-wrapper{

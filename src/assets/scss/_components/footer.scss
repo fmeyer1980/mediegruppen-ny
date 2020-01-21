@@ -20,6 +20,10 @@
 
         .firm-info{
 
+            .splatter{
+                margin-bottom: var(--gutter);
+            }
+
             .info, .contact, .socialmedia{
                 @include list-style-none;
                 margin-bottom: var(--gutter);

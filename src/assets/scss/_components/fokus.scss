@@ -15,11 +15,11 @@
 
     /*----- STYLING -----*/
 
-    padding: var(--section-padding__large) 0;
+    padding: var(--section-padding) 0;
     @extend .container;
     display: grid;
     grid-template-columns: var(--fokus__grid-col);
-    grid-gap: calc(var(--gutter) * 2);
+    // grid-gap: calc(var(--gutter) * 2);
     background-color: $black;
     color: $white;
     .item{
@@ -28,14 +28,32 @@
         align-items: center;
         text-align: center;
         color: inherit;
+        padding: calc(var(--gutter) * 2);
+        transition: background-color, color, .2s ease-in;
+        &:hover{
+            color: $primary;
+            background-color: $dark-gray-dark;
+        }
+
+        &:nth-child(2){
+
+            svg{
+                padding: .7rem;
+            }
+        }
 
         svg{
             fill: currentColor;
-            height: 10rem;
+            height: 9rem;
+            transition: fill, .2s ease-in;
         }
 
         .heading{
             margin-top: 1em;
+        }
+
+        .text{
+            opacity: .8;
         }
     }
 
