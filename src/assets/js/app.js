@@ -1,13 +1,13 @@
 // import RevealOnScroll from './modules/RevealOnScroll'
 import MobilMenu from './modules/mobilMenu'
-// import Popup from './modules/popup'
+import Popup from './modules/popup'
 import StickyHeader from './modules/stickyHeader'
 import Glide from '@glidejs/glide'
-import 'alpinejs'
+// import 'alpinejs'
 // import Swup from 'swup';
 
 
-// new Popup();
+let popup = new Popup();
 let mobiMenu = new MobilMenu();
 let stickyHeader = new StickyHeader();
 

@@ -24,9 +24,6 @@
         
     }
 
-    &.dark{
-       
-    }
 
     ul{
         @include list-style-none;
@@ -53,7 +50,8 @@
                 }
 
                 &:hover{
-                    background-color: rgba($white, .1)
+                    background-color: rgba($white, .05);
+                    color: $primary;
                 }
 
             }

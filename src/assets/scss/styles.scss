@@ -62,11 +62,11 @@ $max_font: 10px;
   --header__height: 15rem;
 
   --container-padding: 8vw;
-  @media (max-width: $screen-lg) {
+  @media (max-width: $screen-sm) {
 
-    --section-padding: 10vmin;
-    --section-padding__small: 5vmin;
-    --section-padding__large: 15vmin;
+    --section-padding: calc(10rem / 2);
+    --section-padding__small: calc(6rem / 2);
+    --section-padding__large: calc(14rem / 2);
 
     --container-padding: 4vw;
   }
