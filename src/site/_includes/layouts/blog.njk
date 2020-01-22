@@ -2,9 +2,15 @@
 {% block content %}
      <main class="main main--right-sidebar blog--page">
         <article class="main__content">
+            <h1 class="heading">{{ title }}</h1>
+            <p class="manchet">{{ manchet_text }}</p>
+            {% if top_text %}
+                <div class="top-text">{{ top_text | safe }}</div>
+            {% endif %}
+            {% if cover_image %}
             <div class="main__content__image-wrapper">
                 <img class="image"
-                    sizes="(max-width: 760px) 100vw, 760px"
+                    sizes="(max-width: 800px) 100vw, 800px"
                     srcset="
                     {{ settings.claudinaryUrl }}c_scale,f_auto,q_auto,w_375{{ settings.claudinaryFolder }}{{ cover_image }} 375w,
                     {{ settings.claudinaryUrl }}c_scale,f_auto,q_auto,w_768{{ settings.claudinaryFolder }}{{ cover_image }} 768w,
@@ -13,11 +19,10 @@
                     src="{{ settings.claudinaryUrl }}c_scale,f_auto,q_auto,w_1280{{ settings.claudinaryFolder }}{{ cover_image }}"
                 alt="{{ title }}">
             </div>
-            
-            <h1 class="heading">{{ title }}</h1>
-            <p class="manchet">{{ manchet_text }}</p>
-            {% if top_text %}
-                <div class="top-text">{{ top_text | safe }}</div>
+            <div class="blog-info">
+                <span class="date">{{ date }}</span>
+                <span class="author">Forfatter: {{ author }}</span>
+            </div>
             {% endif %}
             {% if quote %}
                 <blockquote class="blockquote">

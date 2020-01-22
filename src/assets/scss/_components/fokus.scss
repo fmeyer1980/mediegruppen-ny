@@ -19,7 +19,6 @@
     @extend .container;
     display: grid;
     grid-template-columns: var(--fokus__grid-col);
-    // grid-gap: calc(var(--gutter) * 2);
     background-color: $black;
     color: $white;
     .item{
