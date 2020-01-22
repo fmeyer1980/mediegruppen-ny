@@ -9,7 +9,7 @@
     "start": "yarn run dev",
     "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
     "build": "gulp build & ELEVENTY_ENV=prod eleventy",
-    "webpack": "webpack-cli src/assets/js/app.js -o src/assets/js/script.js --mode production"
+    "webpack": "webpack-cli src/assets/js/app.js -o src/site/_includes/js/script.js --mode production"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",

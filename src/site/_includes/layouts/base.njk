@@ -21,7 +21,10 @@
             {% endblock content %}
 
         {% include "components/footer.njk" %}
-        <script src="/assets/js/script.js" defer></script>
+        {# <script src="/assets/js/script.js" defer></script> #}
+        <script defer>
+            {% include "js/script.js" %}
+        </script>
         <script defer>
             {% include "js/quicklink.js" %}
             window.addEventListener('load', () =>{
