@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" x-data="{ open: false }">
     <div class="top">
         <div class="firm-info">
             <img class="splatter" loading="lazy" src="{{ settings.claudinaryUrl }}c_scale,f_auto,q_auto{{ settings.claudinaryFolder }}splatter" alt="Splatter">
@@ -24,9 +24,21 @@
                 {% include "components/services-nav.njk" %}
             </nav>
         </div>
+        <div class="help">
+            <p class="heading h4">Hvad kan vi hjælpe dig med?</p>
+            <p>Vi vil altid gerne snakke. Både for at give support til vores løsninger, men også hvis du har andet, du ønsker at vende med os. Udfyld felterne, så gi’r vi en kande kaffe.</p>
+            <button class="btn popup-button" @click="open = true">Start en samtale</button>
+        </div>
     </div>
     <div class="bottom">
         <a class="logo" aria-label="Gå til forsiden" href="/">{{ '/src/assets/images/logo_white.svg' | svgContents | safe }}</a>
         <span class="copyright">Copyright © 2020 Mediegruppen. All rights reserved.</span>
+    </div>
+    <div class="footer__popup" x-show="open" @click.away="open = false" x-transition:enter="is-open" x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100">
+        <div class="content">
+            <button class="footer__popup__close" @click="open = false"></button>
+            {% include "components/contact-form.njk" %}
+        </div>
     </div>
 </footer>
