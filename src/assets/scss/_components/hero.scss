@@ -14,11 +14,6 @@
     @media (max-width: $screen-sm) {
         --hero__wrapper__col: 1fr;
         --hero__megaphone__display: none;
-        --hero__heading__font-size: 5rem;
-    }
-
-    @media (max-width: $screen-xs) {
-        --hero__heading__font-size: 4rem;
     }
 
 

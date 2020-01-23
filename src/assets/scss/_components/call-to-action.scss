@@ -1,4 +1,17 @@
 .call-to-action{
+
+    /*----- MEDIA VARIABLER -----*/
+
+    --font-size: inherit;
+
+    @media (max-width: $screen-sm) {
+        --font-size: 2.8rem;
+    }
+
+
+    /*----- STYLING -----*/
+
+
     background-color: $primary;
     padding: var(--section-padding__small) 0;
     color: $white;
@@ -10,6 +23,7 @@
         margin: 0 auto;
         font-style: italic;
         font-weight: 500;
+        font-size: var(--font-size);
     }
     
 }

@@ -3,12 +3,13 @@
     /*----- MEDIA VARIABLER -----*/
 
     --right-sidebar__col: 1fr .45fr;
+    --h1__font-size: 6.2rem;
 
 
     @media (max-width: $screen-sm) {
 
         --right-sidebar__col: 1fr;
-
+        --h1__font-size: 4.2rem;
     }
 
 
@@ -18,7 +19,7 @@
     padding: calc(var(--header__height) + var(--section-padding)) 0 var(--section-padding);
 
     h1{
-        font-size: 6.2rem
+        font-size: var(--h1__font-size);
     }
 
     h2{
