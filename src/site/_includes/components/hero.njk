@@ -1,9 +1,17 @@
 <div class="hero">
     <div class="wrapper">
         <div class="content">
-            <h1 class="heading">{{ hero.heading | safe }}</h1>
-            <p class="text">{{ hero.text }}</p>
+        <div class="heading-wrapper">
+            {% for item in hero %}
+                <h1 class="heading">{{ item.heading | safe }}</h1>
+            {% endfor %}
         </div>
-        {{ '/src/assets/images/megaphone-icon.svg' | svgContents | safe }}
+        <p class="text">Mere menneskeligt, mere vedkommende og mere relevant. Hos Mediegruppen tror vi på, at kommunikation kan ændre verden. Fra dig og mig, fra det nære – til bæredygtighed, sundhed, tryghed og menneskelige relationer. På stærke
+      fortællinger, der skaber troværdig kommunikation</p>
+        </div>
+        <div class="hero__icon">
+            {{ '/src/assets/images/Shape.svg' | svgContents | safe }}
+            {{ '/src/assets/images/Shape-haert.svg' | svgContents | safe }}
+        </div>
     </div>
 </div>

@@ -2,13 +2,9 @@
 layout: "layouts/frontpage.njk"
 title: "Stærke fortællinger og meningsfuld kommunikation"
 description: Beskrivelse af hvad siden handler om.
-hero: 
-  heading: >-
-    Vi hjælper dig med at <span>fortælle</span> din historie bedre
-  text: >-
-    Mere menneskeligt, mere vedkommende og mere relevant. Hos Mediegruppen tror vi på, at kommunikation kan ændre verden. Fra dig og mig, fra det nære
-    – til bæredygtighed, sundhed, tryghed og menneskelige relationer. På stærke
-    fortællinger, der skaber troværdig kommunikation.
+hero:
+  - heading: "Vi hjælper dig med at <span>fortælle</span> din historie bedre"
+  - heading: "Vi hjælper dig med at <span>bevæge</span> igennem nye ideer"
 fokus:
   - heading: "Fortæller"
     text: "Vi hjælper dig med at fortælle din historie bedre. Mere menneskeligt, mere vedkommende og mere relevant."

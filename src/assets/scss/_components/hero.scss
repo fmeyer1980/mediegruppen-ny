@@ -23,6 +23,7 @@
     @extend .container;
     background-color: $primary;
     color: $white;
+    position: relative;
 
     .wrapper{
         display: grid;
@@ -34,16 +35,39 @@
         .content{
             padding-right: 3.2rem;
 
-            .heading{
+            .heading-wrapper{
+              display: grid;
+  
+              .heading{
                 font-size: var(--hero__heading__font-size);
                 margin-top: 0;
                 line-height: 1;
-                margin-bottom: 1em;
+                margin-bottom: .1em;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                
+
+                &:nth-child(1){
+                  animation: heroTextAni 12s infinite;
+                  animation-delay: 0s;
+                  opacity: 0;
+                }
+  
+                &:nth-child(2){
+                  animation: heroTextAni 12s infinite;
+                  animation-delay: 6s;
+                  opacity: 0;
+                }
 
                 span{
                     color: $black;
                 }
             }
+            }
+
+            
 
             .text{
                 font-size: 1.8rem;
@@ -53,13 +77,135 @@
             }
             
         }
-
-        .megaphone{
-            fill: $white;
-            width: 100%;
-            display: var(--hero__megaphone__display);
-        }
+   
     }
 
+    &__icon{
+      position: relative;
+      display: var(--hero__megaphone__display);
 
+      svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+
+      &__megaphone{
+        
+        path {
+          fill: none;
+          stroke: $white;
+          stroke-width: 5px;
+          stroke-dasharray: 1242;
+          stroke-dashoffset: 1242;
+          animation: megaphoneAni 12s infinite;
+          animation-delay: 0s;
+        }
+      }
+
+      &__heart{
+
+        path {
+          fill: none;
+          stroke: $white;
+          stroke-width: 1px;
+          stroke-dasharray: 253;
+          stroke-dashoffset: 253;
+          animation: heartAni 12s infinite;
+          transform-origin: center;
+          animation-delay: 6s;
+        }
+
+      }
+
+    }
+}
+
+@keyframes heroTextAni {
+  0%{
+    opacity: 0;
+  }
+  5%{
+    opacity: 1;
+  }
+  45%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+
+@keyframes megaphoneAni {
+
+  0% {
+    stroke-dashoffset: 1242;
+    animation-timing-function: ease-in;
+  }
+
+  12% {
+    stroke-dashoffset: 0;
+  }
+
+  25%{
+    stroke-dashoffset: 0;
+    animation-timing-function: ease-out;
+  }
+
+  50%{
+    stroke-dashoffset: 1242;
+  }
+
+  100%{
+    stroke-dashoffset: 1242;
+  }
+}
+
+@keyframes heartAni {
+
+  0% {
+    stroke-dashoffset: 253;
+    animation-timing-function: ease-in;
+  }
+
+  15% {
+    stroke-dashoffset: 0;
+
+  }
+
+  22%{
+    transform: scale(1);
+  }
+
+  24%{
+    transform: scale(1.1);
+  }
+
+  26%{
+    transform: scale(1);
+  }
+
+  28%{
+    transform: scale(1.1);
+  }
+
+  30%{
+    transform: scale(1);
+  }
+
+  35%{
+    stroke-dashoffset: 0;
+    animation-timing-function: ease-out;
+  }
+
+  50%{
+    stroke-dashoffset: 253;
+  }
+
+  100%{
+    stroke-dashoffset: 253;
+  }
 }
