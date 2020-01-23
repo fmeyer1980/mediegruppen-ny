@@ -21,7 +21,6 @@
             {% endblock content %}
 
         {% include "components/footer.njk" %}
-        {# <script src="/assets/js/script.js" defer></script> #}
         <script defer>
             {% include "js/script.js" %}
         </script>
@@ -30,8 +29,6 @@
             window.addEventListener('load', () =>{
                 quicklink.listen();
             });
-            var path = document.querySelector('.path');
-var length = path.getTotalLength();
         </script>
     </body>
 </html>
