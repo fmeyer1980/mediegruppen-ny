@@ -1,0 +1,22 @@
+<div class="mobil-header-popup">
+    <div class="wrapper">
+    <span class="heading">Menu</span>
+    <nav class="main-nav--mobil">
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+            listElement: "ul",
+            listItemElement: "li",
+            listClass: "menu",
+            listItemClass: "item",
+            listItemHasChildrenClass: "has-children",
+            activeListItemClass: "active",
+            activeKey: eleventyNavigation.key
+        }) | safe }}
+    </nav>
+    <span class="heading">Følg os på</span>
+    <ul class="social">
+        <li><a href="">{{ '/src/assets/images/facebook-icon.svg' | svgContents | safe }}</a></li>
+        <li><a href="">{{ '/src/assets/images/twitter-icon.svg' | svgContents | safe }}</a></li>
+        <li><a href="">{{ '/src/assets/images/linkedin-icon.svg' | svgContents | safe }}</a></li>
+    </ul>
+    </div>
+</div>
