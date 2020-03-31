@@ -1,6 +1,6 @@
 ---
 layout: "layouts/frontpage.njk"
-title: "Stærke fortællinger og meningsfuld kommunikation"
+title: "Stærke fortællinger og meningsfuld kommunikationn"
 description: Beskrivelse af hvad siden handler om.
 hero:
   - heading: "Vi hjælper dig med at <span>fortælle</span> din historie bedre"
